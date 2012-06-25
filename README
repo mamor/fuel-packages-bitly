@@ -1,0 +1,29 @@
+Supported API:
+/v3/expand
+Bitly::v3_expand('http://bit.ly/MiCtW6'); //return array, including 'http://google.com/'
+http://dev.bitly.com/links.html#v3_expand
+
+/v3/shorten
+Bitly::v3_shorten('http://google.com/') //return array, including 'http://bit.ly/MiCtW6'
+http://dev.bitly.com/links.html#v3_shorten
+
+
+How to:
+1.
+Edit app/config/config.php
+--
+'packages'  => array(
+    'bitly',
+),
+--
+
+2.
+Copy & Edit config/bitly.php
+--
+return array(
+	'login' => 'YOUR_LOGIN',
+	'apikey' => 'YOUR_APIKEY',
+);
+--
+
+You can get login & apikey http://bitly.com/a/your_api_key
