@@ -1,11 +1,9 @@
 Supported API:
 /v3/expand
-Bitly::v3_expand('http://bit.ly/MiCtW6'); //return array, including 'http://google.com/'
-http://dev.bitly.com/links.html#v3_expand
+Bitly::expand('http://bit.ly/MiCtW6'); // 'http://google.com/'
 
 /v3/shorten
-Bitly::v3_shorten('http://google.com/') //return array, including 'http://bit.ly/MiCtW6'
-http://dev.bitly.com/links.html#v3_shorten
+Bitly::shorten('http://google.com/') // 'http://bit.ly/MiCtW6'
 
 
 How to:
