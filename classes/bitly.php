@@ -24,11 +24,11 @@ class Bitly
 	 */
 	public static function expand($short_url)
 	{
-		$ret = self::v3_expand(array('shortUrl' => $short_url));
+		$ret = static::v3_expand(array('shortUrl' => $short_url));
 
-		if(isset($ret['status_code']) && $ret['status_code']==self::STATUS_CODE_OK)
+		if (isset($ret->status_code) && $ret->status_code == static::STATUS_CODE_OK)
 		{
-			return $ret['data']['expand'][0]['long_url'];
+			return $ret->data->expand[0]->long_url;
 		}
 
 		return false;
@@ -43,11 +43,11 @@ class Bitly
 	 */
 	public static function shorten($long_url)
 	{
-		$ret = self::v3_shorten(array('longUrl' => $long_url));
+		$ret = static::v3_shorten(array('longUrl' => $long_url));
 
-		if(isset($ret['status_code']) && $ret['status_code']==self::STATUS_CODE_OK)
+		if (isset($ret->status_code) && $ret->status_code == static::STATUS_CODE_OK)
 		{
-			return $ret['data']['url'];
+			return $ret->data->url;
 		}
 
 		return false;
@@ -71,7 +71,7 @@ class Bitly
 	public static function v3_expand($params)
 	{
 		$method = 'v3/expand?';
-		return self::api($method, $params);
+		return static::api($method, $params);
 	}
 
 	/**
@@ -89,7 +89,7 @@ class Bitly
 	public static function v3_shorten($params)
 	{
 		$method = 'v3/shorten?';
-		return self::api($method, $params);
+		return static::api($method, $params);
 	}
 
 	/*******************************************************
@@ -104,12 +104,12 @@ class Bitly
 	 */
 	public static function api($method, $params)
 	{
-		$url = self::API_URL.$method.http_build_query(
+		$url = static::API_URL.$method.http_build_query(
 			array_merge(\Config::get('bitly'), $params));
 
 		$res = file_get_contents($url);
 
-		return json_decode($res,true);
+		return json_decode($res);
 	}
 }
 
