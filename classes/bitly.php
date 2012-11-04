@@ -17,9 +17,9 @@ class Bitly
 	 ******************************************************/
 	/**
 	 * Expand Short URL.
-	 * 
+	 *
 	 * @param string $short_url
-	 * 
+	 *
 	 * @return string
 	 */
 	public static function expand($short_url)
@@ -36,9 +36,9 @@ class Bitly
 
 	/**
 	 * Shorten Long URL.
-	 * 
+	 *
 	 * @param string $long_url
-	 * 
+	 *
 	 * @return string
 	 */
 	public static function shorten($long_url)
@@ -59,13 +59,13 @@ class Bitly
 	/**
 	 * Expand
 	 * http://dev.bitly.com/links.html#v3_expand
-	 * 
+	 *
 	 * @param array $params
-	 * 
+	 *
 	 * @example
 	 * shortUrl => 'http://bit.ly/1RmnUT',
 	 * hash     => '1RmnUT',
-	 * 
+	 *
 	 * @return array
 	 */
 	public static function v3_expand($params)
@@ -77,13 +77,13 @@ class Bitly
 	/**
 	 * Shorten
 	 * http://dev.bitly.com/links.html#v3_shorten
-	 * 
+	 *
 	 * @param array $params
-	 * 
+	 *
 	 * @example
 	 * longUrl => 'http://google.com/',
 	 * domain  => 'bit.ly',
-	 * 
+	 *
 	 * @return array
 	 */
 	public static function v3_shorten($params)
@@ -97,9 +97,9 @@ class Bitly
 	 ******************************************************/
 	/**
 	 * Call Bitly API.
-	 * 
+	 *
 	 * @param string $method, array $params
-	 * 
+	 *
 	 * @return array
 	 */
 	public static function api($method, $params)
