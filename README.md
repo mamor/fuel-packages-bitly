@@ -4,7 +4,7 @@
 
 ## Usage
 ### 1: Configuration
-1. Get login & apikey [http://bitly.com/a/your_api_key](http://bitly.com/a/your_api_key)
+1. Get login & apikey http://bitly.com/a/your_api_key
 2. Copy packages/bitly/config/bitly.php to under app/config directory.  
 3. Edit bitly.php that copied.  
 
