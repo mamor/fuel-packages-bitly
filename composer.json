@@ -1,0 +1,16 @@
+{
+	"name": "mp-php/fuel-packages-bitly",
+	"type": "fuel-package",
+	"require": {
+		"composer/installers": "*"
+	},
+	"extra": {
+		"installer-name": "bitly"
+	},
+	"authors": [
+		{
+			"name": "Mamoru Otsuka"
+		}
+	],
+	"license": "MIT"
+}
