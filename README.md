@@ -2,6 +2,12 @@
 
 ***
 
+## Install
+### Setup to fuel/packages/bitly
+* Use composer https://packagist.org/packages/mp-php/fuel-packages-bitly
+* git submodule add
+* Download zip
+
 ## Usage
 ### 1: Configuration
 1. Get login & apikey http://bitly.com/a/your_api_key
